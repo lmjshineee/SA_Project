@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0",
+  "scope": "M1 model protocol probe; no role workflow",
+  "run_id": "m1-20261028T121831Z-29ae3bc4",
+  "mode": "live",
+  "started_at": "2026-10-28T12:18:31.404428+00:00",
+  "config": {
+    "provider": "opencode-go",
+    "model": "deepseek-v4.1-flash",
+    "base_url": "https://opencode.ai/inference/go/openai/v1",
+    "temperature": 0.0,
+    "max_output_tokens": 4096,
+    "request_timeout_seconds": 60.0
+  },
+  "environment": {
+    "python": "3.11.15",
+    "os": "Darwin",
+    "os_version": "27.2",
+    "architecture": "arm64",
+    "packages": {
+      "sa-office-agents": "0.1.0",
+      "httpx": "0.28.1",
+      "pydantic": "2.14.1",
+      "python-dotenv": "1.2.4",
+      "langgraph": "1.2.18",
+      "streamlit": "1.66.1",
+      "pytest": "9.2.0"
+    },
+    "code": {
+      "commit": "af7e65185477da4a55fdb2a61df676e177835dc6",
+      "status": ""
+    },
+    "source_sha256": {
+      "pyproject.toml": "70009a1590830f334723682d547d32b5cdd3a9d3ec7b94a2ce3cdc873e7510a7",
+      "requirements.txt": "58cfbd518b769b59df69d048ba115ee23b7e9fd829110df18483562af0fdd314",
+      "requirements-dev.txt": "3d1e2d7819cf3f286f527f722b57dd0f7923c1babc4e9a65f7ab4285613c9425",
+      "src/office_agents/__init__.py": "f876b17080f53b1a4df5a0b7f4776e1cd79ee6530cc91669cb6ff6837b5a6f5e",
+      "src/office_agents/config.py": "edf16c33eb4abe22714674449b133024ebf7abb1ce7f41b94d71c8c1ea5cf029",
+      "src/office_agents/models/__init__.py": "478da17f4331b7649395e2925401ca013caf3f10b6fcc5d286f1f480832fc12a",
+      "src/office_agents/models/chat.py": "f3bc124af927ab8309c417aacc5d34a63ed1c64929c5b2ddc6372e47dc12c755",
+      "src/office_agents/verify.py": "7abcaabdb084947e64f9467715746a2fa18888d24ec77f35b476cb288c31ed56"
+    }
+  },
+  "max_llm_calls": 4,
+  "max_retries_per_call": 0,
+  "reasoning_recorded": false
+}
