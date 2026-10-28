@@ -1,0 +1,43 @@
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Python environment and generated files
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+build/
+dist/
+
+# Local editor and operating system files
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Reproducible runtime output and local model weights
+/runs/
+/logs/
+/models/
+/weights/
+*.log
+*.gguf
+*.safetensors
+*.pt
+*.pth
+
+# Unreviewed evidence stays local; publish reviewed files under evidence/
+/evidence/raw/
