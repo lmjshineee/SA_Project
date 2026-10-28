@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sa-office-agents"
+version = "0.1.0"
+description = "软件体系结构课程多智能体办公汇报实验"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+  "httpx>=0.28,<0.29",
+  "pydantic>=2.11,<3",
+  "python-dotenv>=1.1,<2",
+  "langgraph>=1,<2",
+  "streamlit>=1.50,<2",
+]
+
+[project.scripts]
+office-verify = "office_agents.verify:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
