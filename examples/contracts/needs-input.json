@@ -1,0 +1,15 @@
+{
+  "title": "技术部季度汇报",
+  "department": null,
+  "period": "2026-Q2",
+  "required_sections": [
+    "项目进度"
+  ],
+  "output_format": "markdown",
+  "input_file_ids": [
+    "projects"
+  ],
+  "missing_fields": [
+    "department"
+  ]
+}

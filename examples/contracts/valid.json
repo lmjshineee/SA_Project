@@ -1,0 +1,94 @@
+{
+  "description": "人工构造的协议样例。所有 ID、数据和哈希均为占位，不对应真实文件、模型输出或实验运行。",
+  "task": {
+    "title": "技术部季度汇报",
+    "department": "技术部",
+    "period": "2026-Q2",
+    "required_sections": [
+      "项目进度"
+    ],
+    "output_format": "markdown",
+    "input_file_ids": [
+      "projects"
+    ],
+    "missing_fields": []
+  },
+  "plan": {
+    "sections": [
+      {
+        "section_id": "progress",
+        "title": "项目进度",
+        "purpose": "说明项目完成情况",
+        "required": true,
+        "required_metrics": [
+          "project_completion_rate"
+        ]
+      }
+    ]
+  },
+  "evidence": {
+    "metrics": [
+      {
+        "metric_id": "M001",
+        "metric_key": "project_completion_rate",
+        "raw_value": "60",
+        "display_value": "60.00",
+        "unit": "%",
+        "formula": "completed_project_count / project_count * 100%",
+        "source_refs": [
+          {
+            "file_id": "projects",
+            "snapshot_path": "inputs/projects.csv",
+            "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "record_ids": [
+              "P001",
+              "P002",
+              "P003",
+              "P004",
+              "P005"
+            ],
+            "line_range": [
+              2,
+              6
+            ]
+          }
+        ]
+      }
+    ],
+    "excerpts": [],
+    "missing_required": [],
+    "limitations": [
+      "仅为构造的结构样例，不是业务事实或工具计算结果。"
+    ]
+  },
+  "draft": {
+    "sections": [
+      {
+        "section_id": "progress",
+        "content": "项目完成情况见指标 M001。",
+        "claim_ids": [
+          "C001"
+        ]
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "C001",
+        "section_id": "progress",
+        "metric_id": "M001",
+        "value": "60",
+        "unit": "%"
+      }
+    ],
+    "plan_ref": "artifacts/plan-r0.json",
+    "evidence_ref": "artifacts/evidence-r0.json"
+  },
+  "review": {
+    "decision": "approved",
+    "issues": [],
+    "suggested_repair_target": "none",
+    "draft_ref": "artifacts/draft-r0.json",
+    "draft_sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+    "evidence_ref": "artifacts/evidence-r0.json"
+  }
+}

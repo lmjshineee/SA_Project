@@ -1,0 +1,65 @@
+{
+  "description": "故意构造的非法对象；不是模型事故或受控运行记录。",
+  "cases": [
+    {
+      "kind": "task",
+      "value": {
+        "title": "技术部季度汇报",
+        "department": null,
+        "period": "2026-Q2",
+        "required_sections": [
+          "项目进度"
+        ],
+        "output_format": "markdown",
+        "input_file_ids": [
+          "projects"
+        ],
+        "missing_fields": []
+      },
+      "expected_error": "missing_fields"
+    },
+    {
+      "kind": "review",
+      "value": {
+        "decision": "approved",
+        "issues": [
+          {
+            "issue_id": "I001",
+            "severity": "blocker",
+            "category": "metric",
+            "section_id": "progress",
+            "claim_id": "C001",
+            "expected": "60",
+            "actual": "75",
+            "suggestion": "按证据修正指标引用"
+          }
+        ],
+        "suggested_repair_target": "none",
+        "draft_ref": "artifacts/draft-r0.json",
+        "draft_sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+        "evidence_ref": "artifacts/evidence-r0.json"
+      },
+      "expected_error": "approved"
+    },
+    {
+      "kind": "source",
+      "value": {
+        "file_id": "projects",
+        "snapshot_path": "inputs/../../private.csv",
+        "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "record_ids": [
+          "P001",
+          "P002",
+          "P003",
+          "P004",
+          "P005"
+        ],
+        "line_range": [
+          2,
+          6
+        ]
+      },
+      "expected_error": "path"
+    }
+  ]
+}
