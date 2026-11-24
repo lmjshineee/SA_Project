@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0",
+  "sections": [
+    {
+      "schema_version": "1.0",
+      "section_id": "project_progress",
+      "title": "项目进度",
+      "purpose": "汇总本季度项目数量、已完成项目数量及项目完成率，说明整体推进情况。",
+      "required": true,
+      "required_metrics": [
+        "project_count",
+        "completed_project_count",
+        "project_completion_rate"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "section_id": "attendance",
+      "title": "人员考勤",
+      "purpose": "汇总本季度人员考勤情况，突出整体出勤率。",
+      "required": true,
+      "required_metrics": [
+        "attendance_rate"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "section_id": "achievements",
+      "title": "成果统计",
+      "purpose": "统计本季度技术成果数量，概括主要产出。",
+      "required": true,
+      "required_metrics": [
+        "achievement_count"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "section_id": "next_steps",
+      "title": "下一步计划",
+      "purpose": "列出下一阶段工作重点与推进安排。",
+      "required": true,
+      "required_metrics": []
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "schema_version": "1.0",
+  "metrics": [
+    {
+      "schema_version": "1.0",
+      "metric_id": "satisfied_feedback_count",
+      "metric_key": "satisfied_feedback_count",
+      "raw_value": "17",
+      "display_value": "17",
+      "unit": "条",
+      "formula": "得分至少为 4 的反馈数",
+      "source_refs": [
+        {
+          "schema_version": "1.0",
+          "file_id": "service_feedback",
+          "snapshot_path": "inputs/service_feedback.csv",
+          "sha256": "ec4bcfcc07adf3f985df127eb4e939ef380f75a7f5547d3573c410ae43314e08",
+          "record_ids": [
+            "F01",
+            "F02",
+            "F03",
+            "F04",
+            "F05",
+            "F06",
+            "F07",
+            "F08",
+            "F09",
+            "F10",
+            "F11",
+            "F12",
+            "F13",
+            "F14",
+            "F15",
+            "F16",
+            "F17",
+            "F18",
+            "F19",
+            "F20"
+          ],
+          "line_range": null
+        }
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "metric_id": "feedback_count",
+      "metric_key": "feedback_count",
+      "raw_value": "20",
+      "display_value": "20",
+      "unit": "条",
+      "formula": "有效反馈样本数",
+      "source_refs": [
+        {
+          "schema_version": "1.0",
+          "file_id": "service_feedback",
+          "snapshot_path": "inputs/service_feedback.csv",
+          "sha256": "ec4bcfcc07adf3f985df127eb4e939ef380f75a7f5547d3573c410ae43314e08",
+          "record_ids": [
+            "F01",
+            "F02",
+            "F03",
+            "F04",
+            "F05",
+            "F06",
+            "F07",
+            "F08",
+            "F09",
+            "F10",
+            "F11",
+            "F12",
+            "F13",
+            "F14",
+            "F15",
+            "F16",
+            "F17",
+            "F18",
+            "F19",
+            "F20"
+          ],
+          "line_range": null
+        }
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "metric_id": "satisfaction_rate",
+      "metric_key": "satisfaction_rate",
+      "raw_value": "85",
+      "display_value": "85.00",
+      "unit": "%",
+      "formula": "满意反馈数 ÷ 有效反馈样本数 × 100",
+      "source_refs": [
+        {
+          "schema_version": "1.0",
+          "file_id": "service_feedback",
+          "snapshot_path": "inputs/service_feedback.csv",
+          "sha256": "ec4bcfcc07adf3f985df127eb4e939ef380f75a7f5547d3573c410ae43314e08",
+          "record_ids": [
+            "F01",
+            "F02",
+            "F03",
+            "F04",
+            "F05",
+            "F06",
+            "F07",
+            "F08",
+            "F09",
+            "F10",
+            "F11",
+            "F12",
+            "F13",
+            "F14",
+            "F15",
+            "F16",
+            "F17",
+            "F18",
+            "F19",
+            "F20"
+          ],
+          "line_range": null
+        }
+      ]
+    }
+  ],
+  "excerpts": [
+    {
+      "schema_version": "1.0",
+      "excerpt_id": "N3",
+      "text": "服务台记录显示，访客预约回执偶有延迟。",
+      "source_ref": {
+        "schema_version": "1.0",
+        "file_id": "notes",
+        "snapshot_path": "inputs/notes.txt",
+        "sha256": "0640d020b076e8d70818f8a973d611638dce296d446854337865c04276a274fb",
+        "record_ids": [],
+        "line_range": [
+          3,
+          3
+        ]
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "excerpt_id": "N4",
+      "text": "建议统一回执模板并明确值班交接时点，后续通过复查回执记录评估效果。",
+      "source_ref": {
+        "schema_version": "1.0",
+        "file_id": "notes",
+        "snapshot_path": "inputs/notes.txt",
+        "sha256": "0640d020b076e8d70818f8a973d611638dce296d446854337865c04276a274fb",
+        "record_ids": [],
+        "line_range": [
+          4,
+          4
+        ]
+      }
+    }
+  ],
+  "missing_required": [],
+  "limitations": []
+}

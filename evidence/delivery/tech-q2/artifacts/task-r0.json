@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0",
+  "title": "2026年第二季度技术部工作汇报",
+  "department": "技术部",
+  "period": "2026-Q2",
+  "required_sections": [
+    "项目进度",
+    "人员考勤",
+    "成果统计",
+    "下一步计划"
+  ],
+  "output_format": "markdown",
+  "input_file_ids": [
+    "achievements",
+    "attendance",
+    "notes",
+    "projects"
+  ],
+  "missing_fields": []
+}

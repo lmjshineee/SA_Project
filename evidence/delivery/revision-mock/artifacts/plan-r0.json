@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0",
+  "sections": [
+    {
+      "schema_version": "1.0",
+      "section_id": "s0",
+      "title": "服务满意度",
+      "purpose": "服务满意度",
+      "required": true,
+      "required_metrics": [
+        "satisfied_feedback_count",
+        "feedback_count",
+        "satisfaction_rate"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "section_id": "s1",
+      "title": "存在问题",
+      "purpose": "存在问题",
+      "required": true,
+      "required_metrics": []
+    },
+    {
+      "schema_version": "1.0",
+      "section_id": "s2",
+      "title": "改进建议",
+      "purpose": "改进建议",
+      "required": true,
+      "required_metrics": []
+    }
+  ]
+}

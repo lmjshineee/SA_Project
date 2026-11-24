@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0",
+  "sections": [
+    {
+      "schema_version": "1.0",
+      "section_id": "service_satisfaction",
+      "title": "服务满意度",
+      "purpose": "汇总2026年第一季度行政服务反馈中的满意反馈数、反馈总数并计算满意度，形成满意度概览。",
+      "required": true,
+      "required_metrics": [
+        "satisfied_feedback_count",
+        "feedback_count",
+        "satisfaction_rate"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "section_id": "existing_problems",
+      "title": "存在问题",
+      "purpose": "基于资料和反馈摘录，归纳2026年第一季度行政服务中存在的主要问题。",
+      "required": true,
+      "required_metrics": []
+    },
+    {
+      "schema_version": "1.0",
+      "section_id": "improvement_suggestions",
+      "title": "改进建议",
+      "purpose": "针对存在问题提出后续改进建议，可使用文字摘录形式呈现。",
+      "required": true,
+      "required_metrics": []
+    }
+  ]
+}

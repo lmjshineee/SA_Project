@@ -1,0 +1,57 @@
+{
+  "run_id": "office-22adf140ce80",
+  "mode": "mock",
+  "request": "生成2026年第一季度行政部工作汇报，包含服务满意度、存在问题和改进建议。",
+  "controlled_injection": false,
+  "started_at": "2026-11-24T13:57:39.579232+00:00",
+  "environment": {
+    "python": "3.11.15",
+    "os": "Darwin",
+    "os_version": "27.3",
+    "architecture": "arm64",
+    "packages": {
+      "sa-office-agents": "0.1.0",
+      "httpx": "0.28.1",
+      "pydantic": "2.14.1",
+      "python-dotenv": "1.2.4",
+      "langgraph": "1.2.18",
+      "streamlit": "1.66.1",
+      "pytest": "9.2.0"
+    },
+    "code": {
+      "commit": "53d659a2db78cf03ee1fa25320e2dd766d582db8"
+    },
+    "source_sha256": {
+      "pyproject.toml": "70009a1590830f334723682d547d32b5cdd3a9d3ec7b94a2ce3cdc873e7510a7",
+      "requirements.txt": "58cfbd518b769b59df69d048ba115ee23b7e9fd829110df18483562af0fdd314",
+      "requirements-dev.txt": "3d1e2d7819cf3f286f527f722b57dd0f7923c1babc4e9a65f7ab4285613c9425",
+      "src/office_agents/__init__.py": "f876b17080f53b1a4df5a0b7f4776e1cd79ee6530cc91669cb6ff6837b5a6f5e",
+      "src/office_agents/config.py": "edf16c33eb4abe22714674449b133024ebf7abb1ce7f41b94d71c8c1ea5cf029",
+      "src/office_agents/models/__init__.py": "478da17f4331b7649395e2925401ca013caf3f10b6fcc5d286f1f480832fc12a",
+      "src/office_agents/models/chat.py": "8ea3bdfdd7baa1db9e0acf6d9e0ee77f7d3bf8ebc8b0b79d68c7d85e799337ed",
+      "src/office_agents/role_probe.py": "5d8d1b5c1b74a64f04b33a82ee1a1cf4122fc0b72a029c76b497bddf0e5fa0f3",
+      "src/office_agents/roles.py": "51cda9badd1dac053875f330534845febf04545a04f65990156ba8bb40859304",
+      "src/office_agents/schemas/__init__.py": "d467459a564a988ea0c323c9a515b33c297175144362ab64eaf4fc347f605ec3",
+      "src/office_agents/schemas/base.py": "fb4a55e35932d797ac24b96695dc3dacf5a05674c90b87456e87948241f29ab2",
+      "src/office_agents/schemas/evidence.py": "9f94459042673db5c685d08ab7023d4b49d555ec72681b6aaf3bc8cc402aebdf",
+      "src/office_agents/schemas/report.py": "568e67948086f363c6c2cd2f55b754e0e5deb089b4ab4a9acea4287804397795",
+      "src/office_agents/schemas/task.py": "57ae860cc44086e001cff01dd7390d52a331bccba860be50b6237d790ba5535b",
+      "src/office_agents/schemas/validation.py": "8c62bbec782ce30b1bae83d0e49763b7e3a7b49952b539079e7ab76109cc26da",
+      "src/office_agents/statistics.py": "3beafe909020771c2d6aa53cc9e76dfe06d922ec8542157930f7c08deb5aa75a",
+      "src/office_agents/verify.py": "7abcaabdb084947e64f9467715746a2fa18888d24ec77f35b476cb288c31ed56",
+      "src/office_agents/workflow.py": "dd739b5c6351ec7535e2444f5218fc1dd72a341862a0f0667a8bdbb7cfa47d86"
+    }
+  },
+  "input_sha256": {
+    "notes.txt": "0640d020b076e8d70818f8a973d611638dce296d446854337865c04276a274fb",
+    "service_feedback.csv": "ec4bcfcc07adf3f985df127eb4e939ef380f75a7f5547d3573c410ae43314e08"
+  },
+  "config": {
+    "provider": "opencode-go",
+    "model": "test-double",
+    "base_url": "https://opencode.ai/inference/go/openai/v1",
+    "temperature": 0,
+    "max_output_tokens": 4096,
+    "request_timeout_seconds": 60
+  }
+}

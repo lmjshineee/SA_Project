@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0",
+  "sections": [
+    {
+      "schema_version": "1.0",
+      "section_id": "service_satisfaction",
+      "content": "本季度服务反馈中，满意反馈为17条，有效反馈样本总数为20条，服务满意度为85.00%。",
+      "claim_ids": [
+        "C1",
+        "C2",
+        "C3"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "section_id": "existing_problems",
+      "content": "服务台记录显示，访客预约回执偶有延迟。",
+      "claim_ids": []
+    },
+    {
+      "schema_version": "1.0",
+      "section_id": "improvement_suggestions",
+      "content": "建议统一回执模板并明确值班交接时点，后续通过复查回执记录评估效果。",
+      "claim_ids": []
+    }
+  ],
+  "claims": [
+    {
+      "schema_version": "1.0",
+      "claim_id": "C1",
+      "section_id": "service_satisfaction",
+      "metric_id": "satisfied_feedback_count",
+      "value": "17",
+      "unit": "条"
+    },
+    {
+      "schema_version": "1.0",
+      "claim_id": "C2",
+      "section_id": "service_satisfaction",
+      "metric_id": "feedback_count",
+      "value": "20",
+      "unit": "条"
+    },
+    {
+      "schema_version": "1.0",
+      "claim_id": "C3",
+      "section_id": "service_satisfaction",
+      "metric_id": "satisfaction_rate",
+      "value": "85",
+      "unit": "%"
+    }
+  ],
+  "plan_ref": "artifacts/plan-r0.json",
+  "evidence_ref": "artifacts/evidence-r0.json"
+}

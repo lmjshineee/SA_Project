@@ -1,0 +1,163 @@
+{
+  "schema_version": "1.0",
+  "metrics": [
+    {
+      "schema_version": "1.0",
+      "metric_id": "achievement_count",
+      "metric_key": "achievement_count",
+      "raw_value": "4",
+      "display_value": "4",
+      "unit": "个",
+      "formula": "唯一成果记录数",
+      "source_refs": [
+        {
+          "schema_version": "1.0",
+          "file_id": "achievements",
+          "snapshot_path": "inputs/achievements.csv",
+          "sha256": "10b1487725c04e3a62385c81af94c1f2a6b868ed8885af3d2ed453f9b4cb1b5d",
+          "record_ids": [
+            "A01",
+            "A02",
+            "A03",
+            "A04"
+          ],
+          "line_range": null
+        }
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "metric_id": "attendance_rate",
+      "metric_key": "attendance_rate",
+      "raw_value": "96",
+      "display_value": "96.00",
+      "unit": "%",
+      "formula": "总实到天数 ÷ 总应到天数 × 100",
+      "source_refs": [
+        {
+          "schema_version": "1.0",
+          "file_id": "attendance",
+          "snapshot_path": "inputs/attendance.csv",
+          "sha256": "6c0772ae2264c8c05a817a85ec62183c0dc495da93cef44fd8f40cc396f013c7",
+          "record_ids": [
+            "M01",
+            "M02",
+            "M03"
+          ],
+          "line_range": null
+        }
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "metric_id": "project_count",
+      "metric_key": "project_count",
+      "raw_value": "5",
+      "display_value": "5",
+      "unit": "个",
+      "formula": "项目记录数",
+      "source_refs": [
+        {
+          "schema_version": "1.0",
+          "file_id": "projects",
+          "snapshot_path": "inputs/projects.csv",
+          "sha256": "0dbaba723070b05225745730e3d429b306bc5b67bb54902af30c2b8378e288d8",
+          "record_ids": [
+            "P01",
+            "P02",
+            "P03",
+            "P04",
+            "P05"
+          ],
+          "line_range": null
+        }
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "metric_id": "completed_project_count",
+      "metric_key": "completed_project_count",
+      "raw_value": "3",
+      "display_value": "3",
+      "unit": "个",
+      "formula": "状态为 completed 的记录数",
+      "source_refs": [
+        {
+          "schema_version": "1.0",
+          "file_id": "projects",
+          "snapshot_path": "inputs/projects.csv",
+          "sha256": "0dbaba723070b05225745730e3d429b306bc5b67bb54902af30c2b8378e288d8",
+          "record_ids": [
+            "P01",
+            "P02",
+            "P03",
+            "P04",
+            "P05"
+          ],
+          "line_range": null
+        }
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "metric_id": "project_completion_rate",
+      "metric_key": "project_completion_rate",
+      "raw_value": "60",
+      "display_value": "60.00",
+      "unit": "%",
+      "formula": "完成项目数 ÷ 项目数 × 100",
+      "source_refs": [
+        {
+          "schema_version": "1.0",
+          "file_id": "projects",
+          "snapshot_path": "inputs/projects.csv",
+          "sha256": "0dbaba723070b05225745730e3d429b306bc5b67bb54902af30c2b8378e288d8",
+          "record_ids": [
+            "P01",
+            "P02",
+            "P03",
+            "P04",
+            "P05"
+          ],
+          "line_range": null
+        }
+      ]
+    }
+  ],
+  "excerpts": [
+    {
+      "schema_version": "1.0",
+      "excerpt_id": "N3",
+      "text": "日志归档依赖跨组确认存储周期，查询优化仍在比对样本。",
+      "source_ref": {
+        "schema_version": "1.0",
+        "file_id": "notes",
+        "snapshot_path": "inputs/notes.txt",
+        "sha256": "13582e841d91a8b1602f6b700f7dc46252f7d2db4ccfeae7ef8e644797a3a700",
+        "record_ids": [],
+        "line_range": [
+          3,
+          3
+        ]
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "excerpt_id": "N4",
+      "text": "下一步安排跨组评审，并在样本库完成查询回归。",
+      "source_ref": {
+        "schema_version": "1.0",
+        "file_id": "notes",
+        "snapshot_path": "inputs/notes.txt",
+        "sha256": "13582e841d91a8b1602f6b700f7dc46252f7d2db4ccfeae7ef8e644797a3a700",
+        "record_ids": [],
+        "line_range": [
+          4,
+          4
+        ]
+      }
+    }
+  ],
+  "missing_required": [],
+  "limitations": []
+}

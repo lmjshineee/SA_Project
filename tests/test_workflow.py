@@ -167,3 +167,23 @@ def test_run(tmp_path, scenario, fault, status, revisions, calls):
             json.loads((path / "artifacts/review-r0.json").read_text())["decision"]
             == "changes_required"
         )
+
+
+@pytest.mark.parametrize("limit,code", [("calls", "CALL_LIMIT"), ("time", "RUN_TIMEOUT")])
+def test_budget_before_network(tmp_path, limit, code):
+    import time
+    from unittest.mock import Mock
+    from office_agents.models.chat import ModelError
+    from office_agents.roles import Roles
+    from office_agents.workflow import Run
+
+    run = Run(tmp_path, "mock", "限额验证", False, None)
+    if limit == "calls":
+        run.calls = 30
+    else:
+        run.started = time.monotonic() - 601
+    model = Mock()
+    with pytest.raises(ModelError) as caught:
+        Roles(model, run).complete([])
+    assert caught.value.code == code
+    model.complete.assert_not_called()

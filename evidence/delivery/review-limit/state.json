@@ -1,0 +1,11 @@
+{
+  "status": "needs_review",
+  "refs": {
+    "task": "artifacts/task-r0.json",
+    "plan": "artifacts/plan-r0.json",
+    "evidence": "artifacts/evidence-r0.json",
+    "draft": "artifacts/draft-r2.json",
+    "review": "artifacts/review-r2.json"
+  },
+  "revision_round": 2
+}

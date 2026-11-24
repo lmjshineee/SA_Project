@@ -1,0 +1,13 @@
+{
+  "run_id": "office-06777851ef1a",
+  "mode": "live",
+  "status": "failed",
+  "detail": "模型请求超时",
+  "error_code": "MODEL_TIMEOUT",
+  "calls": 2,
+  "revisions": 0,
+  "ended_at": "2026-11-24T13:55:40.206141+00:00",
+  "duration_ms": 123404,
+  "refs": {},
+  "report": null
+}

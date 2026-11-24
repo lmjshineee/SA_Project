@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0",
+  "sections": [
+    {
+      "schema_version": "1.0",
+      "section_id": "project_progress",
+      "title": "项目进度",
+      "purpose": "汇总项目总数、已完成项目数及项目完成率，呈现季度项目推进情况。",
+      "required": true,
+      "required_metrics": [
+        "project_count",
+        "completed_project_count",
+        "project_completion_rate"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "section_id": "attendance",
+      "title": "人员考勤",
+      "purpose": "汇总人员考勤率，反映团队出勤情况。",
+      "required": true,
+      "required_metrics": [
+        "attendance_rate"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "section_id": "achievements",
+      "title": "成果统计",
+      "purpose": "统计本季度成果数量，展示技术产出情况。",
+      "required": true,
+      "required_metrics": [
+        "achievement_count"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "section_id": "service_satisfaction",
+      "title": "服务满意度",
+      "purpose": "汇总满意反馈数、反馈总数及满意度，反映服务评价情况。",
+      "required": true,
+      "required_metrics": [
+        "satisfied_feedback_count",
+        "feedback_count",
+        "satisfaction_rate"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "section_id": "next_plan",
+      "title": "下一步计划",
+      "purpose": "以文字摘录方式说明下季度重点计划与资源安排。",
+      "required": true,
+      "required_metrics": []
+    }
+  ]
+}

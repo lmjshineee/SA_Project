@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0",
+  "sections": [
+    {
+      "schema_version": "1.0",
+      "section_id": "project_progress",
+      "content": "2026年第二季度技术部项目记录数为5个，其中已完成项目3个，项目完成率为60.00%。",
+      "claim_ids": [
+        "C1",
+        "C2",
+        "C3"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "section_id": "attendance",
+      "content": "本季度人员考勤按总实到天数÷总应到天数计算，整体出勤率为96.00%。",
+      "claim_ids": [
+        "C4"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "section_id": "achievements",
+      "content": "本季度技术成果按唯一成果记录数统计为4个。",
+      "claim_ids": [
+        "C5"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "section_id": "next_steps",
+      "content": "下一步安排跨组评审，并在样本库完成查询回归。",
+      "claim_ids": []
+    }
+  ],
+  "claims": [
+    {
+      "schema_version": "1.0",
+      "claim_id": "C1",
+      "section_id": "project_progress",
+      "metric_id": "project_count",
+      "value": "5",
+      "unit": "个"
+    },
+    {
+      "schema_version": "1.0",
+      "claim_id": "C2",
+      "section_id": "project_progress",
+      "metric_id": "completed_project_count",
+      "value": "3",
+      "unit": "个"
+    },
+    {
+      "schema_version": "1.0",
+      "claim_id": "C3",
+      "section_id": "project_progress",
+      "metric_id": "project_completion_rate",
+      "value": "60",
+      "unit": "%"
+    },
+    {
+      "schema_version": "1.0",
+      "claim_id": "C4",
+      "section_id": "attendance",
+      "metric_id": "attendance_rate",
+      "value": "96",
+      "unit": "%"
+    },
+    {
+      "schema_version": "1.0",
+      "claim_id": "C5",
+      "section_id": "achievements",
+      "metric_id": "achievement_count",
+      "value": "4",
+      "unit": "个"
+    }
+  ],
+  "plan_ref": "artifacts/plan-r0.json",
+  "evidence_ref": "artifacts/evidence-r0.json"
+}
