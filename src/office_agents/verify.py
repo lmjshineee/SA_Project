@@ -50,8 +50,12 @@ def environment() -> dict:
             packages[name] = "not installed"
     git = {}
     for label, args in (("commit", ["rev-parse", "HEAD"]), ("status", ["status", "--porcelain"])):
-        result = subprocess.run(["git", *args], capture_output=True, text=True, check=False)
-        git[label] = result.stdout.strip() if result.returncode == 0 else "unavailable"
+        try:
+            result = subprocess.run(["git", *args], capture_output=True, text=True, check=False)
+        except FileNotFoundError:
+            git[label] = "unavailable"
+        else:
+            git[label] = result.stdout.strip() if result.returncode == 0 else "unavailable"
     # Tie pre-commit validation to the actual public source, even in a dirty tree.
     sources = {}
     candidates = [Path("pyproject.toml"), Path("requirements.txt"), Path("requirements-dev.txt")]

@@ -231,3 +231,12 @@ def test_unexpected_secret_in_model_output_is_redacted(tmp_path):
     assert "[REDACTED]" in (path / "events.jsonl").read_text()
     for file in path.iterdir():
         assert TEST_KEY not in file.read_text()
+
+
+def test_archive_environment_without_git(monkeypatch):
+    from office_agents.verify import environment
+
+    monkeypatch.setenv("PATH", "")
+    result = environment()
+    assert result["code"]["commit"] == "unavailable"
+    assert "src/office_agents/roles.py" in result["source_sha256"]
