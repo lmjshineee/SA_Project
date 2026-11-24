@@ -8,9 +8,10 @@ from office_agents.config import Settings
 
 
 class ModelError(Exception):
-    def __init__(self, code: str, message: str):
+    def __init__(self, code: str, message: str, *, transient: bool = False):
         super().__init__(message)
         self.code = code
+        self.transient = transient
 
 
 class FunctionCall(BaseModel):
@@ -81,7 +82,7 @@ class ChatModel:
     def close(self) -> None:
         self.client.close()
 
-    def complete(self, messages: list[dict], **options) -> Completion:
+    def complete(self, messages: list[dict], *, request_timeout=None, **options) -> Completion:
         payload = {
             "model": self.settings.model, "messages": messages,
             "temperature": self.settings.temperature,
@@ -89,14 +90,16 @@ class ChatModel:
             **options,
         }
         try:
-            response = self.client.post("chat/completions", json=payload)
+            response = self.client.post("chat/completions", json=payload,
+                                        timeout=request_timeout or self.settings.request_timeout_seconds)
         except httpx.TimeoutException:
-            raise ModelError("MODEL_TIMEOUT", "模型请求超时；未自动重试") from None
+            raise ModelError("MODEL_TIMEOUT", "模型请求超时", transient=True) from None
         except httpx.HTTPError:
-            raise ModelError("MODEL_UNAVAILABLE", "模型连接失败；检查本机网络和代理") from None
+            raise ModelError("MODEL_UNAVAILABLE", "模型连接失败；检查本机网络和代理", transient=True) from None
         if response.status_code >= 300:
             # Do not print the response body: it can echo credentials or request data.
-            raise ModelError("MODEL_UNAVAILABLE", f"模型服务返回 HTTP {response.status_code}；未自动重试")
+            raise ModelError("MODEL_UNAVAILABLE", f"模型服务返回 HTTP {response.status_code}",
+                             transient=response.status_code in {408, 429, 500, 502, 503, 504})
         try:
             result = Completion.model_validate(response.json())
         except (ValueError, ValidationError):

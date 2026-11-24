@@ -1,4 +1,5 @@
 from pathlib import Path
+
 import pytest
 
 from office_agents.schemas import ReportPlan, TaskSpec
@@ -13,24 +14,68 @@ def fixture(root, name, change=None):
         change(files)
     hashes = snapshot(files, root)
     tech = name == "tech-q2"
-    task = TaskSpec(title="季度汇报", period="2026-Q2" if tech else "2026-Q1", department="技术部" if tech else "行政部",
-                    required_sections=["统计"], output_format="markdown", input_file_ids=list(files), missing_fields=[])
-    keys = [k for g, keys in GROUPS.items() if (g != "service_feedback") == tech for k in keys]
-    plan = ReportPlan(sections=[dict(section_id="s1", title="统计", purpose="复核", required=True, required_metrics=keys)])
+    task = TaskSpec(
+        title="季度汇报",
+        period="2026-Q2" if tech else "2026-Q1",
+        department="技术部" if tech else "行政部",
+        required_sections=["统计"],
+        output_format="markdown",
+        input_file_ids=list(files),
+        missing_fields=[],
+    )
+    keys = [
+        k
+        for g, keys in GROUPS.items()
+        if (g != "service_feedback") == tech
+        for k in keys
+    ]
+    plan = ReportPlan(
+        sections=[
+            {
+                "section_id": "s1",
+                "title": "统计",
+                "purpose": "复核",
+                "required": True,
+                "required_metrics": keys,
+            }
+        ]
+    )
     return hashes, task, plan
 
 
-@pytest.mark.parametrize("name,expected", [
-    ("tech-q2", {"project_count":"5","completed_project_count":"3","project_completion_rate":"60.00",
-                 "attendance_rate":"96.00","achievement_count":"4"}),
-    ("admin-q1", {"feedback_count":"20","satisfied_feedback_count":"17","satisfaction_rate":"85.00"})])
+@pytest.mark.parametrize(
+    "name,expected",
+    [
+        (
+            "tech-q2",
+            {
+                "project_count": "5",
+                "completed_project_count": "3",
+                "project_completion_rate": "60.00",
+                "attendance_rate": "96.00",
+                "achievement_count": "4",
+            },
+        ),
+        (
+            "admin-q1",
+            {
+                "feedback_count": "20",
+                "satisfied_feedback_count": "17",
+                "satisfaction_rate": "85.00",
+            },
+        ),
+    ],
+)
 def test_metrics_and_scope(tmp_path, name, expected):
     def extra(files):
         if name == "admin-q1":
-            files["service_feedback.csv"] += "other,技术部,2026-Q1,1\nprior,行政部,2025-Q4,1\n".encode()
+            files["service_feedback.csv"] += (
+                "other,技术部,2026-Q1,1\nprior,行政部,2025-Q4,1\n".encode()
+            )
+
     args = fixture(tmp_path, name, extra)
     result = collect(tmp_path, *args)
-    assert {m.metric_key:m.display_value for m in result.metrics} == expected
+    assert {m.metric_key: m.display_value for m in result.metrics} == expected
     assert len(result.excerpts) == 2 and not result.missing_required
     for m in result.metrics:
         ref = m.source_refs[0]
@@ -38,7 +83,10 @@ def test_metrics_and_scope(tmp_path, name, expected):
         assert "other" not in ref.record_ids and "prior" not in ref.record_ids
 
 
-@pytest.mark.parametrize("mutation", ["duplicate", "encoding", "negative", "zero", "missing", "tamper", "symlink"])
+@pytest.mark.parametrize(
+    "mutation",
+    ["duplicate", "encoding", "negative", "zero", "missing", "tamper", "symlink"],
+)
 def test_invalid_data(tmp_path, mutation):
     def change(files):
         name = "attendance.csv"
@@ -50,9 +98,10 @@ def test_invalid_data(tmp_path, mutation):
         if mutation == "negative":
             files[name] = files[name].replace(b",38", b",-1")
         if mutation == "zero":
-            files[name] = rows[0] + rows[1].replace(b"40,38",b"0,0")
+            files[name] = rows[0] + rows[1].replace(b"40,38", b"0,0")
         if mutation == "missing":
             files.pop(name)
+
     args = fixture(tmp_path, "tech-q2", change)
     if mutation == "tamper":
         (tmp_path / "attendance.csv").write_text("modified")
