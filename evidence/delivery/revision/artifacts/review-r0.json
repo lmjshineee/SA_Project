@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "decision": "changes_required",
+  "issues": [
+    {
+      "schema_version": "1.0",
+      "issue_id": "I1",
+      "severity": "blocker",
+      "category": "metric",
+      "section_id": "service_satisfaction",
+      "claim_id": "C1",
+      "expected": "17条",
+      "actual": "18条",
+      "suggestion": "将 C1 的 satisfied_feedback_count 修订为证据中的 17 条，并确保指标表与正文一致。"
+    },
+    {
+      "schema_version": "1.0",
+      "issue_id": "I2",
+      "severity": "blocker",
+      "category": "metric",
+      "section_id": null,
+      "claim_id": null,
+      "expected": "结构化声明与证据和大纲一致",
+      "actual": "claim differs from supplied evidence: C1",
+      "suggestion": "重新核对本轮大纲、声明和统计值"
+    }
+  ],
+  "suggested_repair_target": "writer",
+  "draft_ref": "artifacts/draft-r0.json",
+  "draft_sha256": "a4f633f8116479a5c0f586d2cafaf864ac769228da24dfaa88776efa7c94b23f",
+  "evidence_ref": "artifacts/evidence-r0.json"
+}

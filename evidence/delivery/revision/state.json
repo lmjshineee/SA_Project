@@ -1,0 +1,11 @@
+{
+  "status": "succeeded",
+  "refs": {
+    "task": "artifacts/task-r0.json",
+    "plan": "artifacts/plan-r0.json",
+    "evidence": "artifacts/evidence-r0.json",
+    "draft": "artifacts/draft-r1.json",
+    "review": "artifacts/review-r1.json"
+  },
+  "revision_round": 1
+}

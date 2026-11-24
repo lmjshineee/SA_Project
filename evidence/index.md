@@ -30,6 +30,7 @@ M1 状态、验证结论及限制见 [M1 实施记录](../docs/M1实施记录.md
 | 技术部正常汇报 | live，6 次调用，通过 | [摘要](delivery/tech-q2/summary.json) · [业务报告](delivery/tech-q2/report.md) · [事件](delivery/tech-q2/events.jsonl) |
 | 行政部正常汇报 | live，6 次调用，通过 | [摘要](delivery/admin-q1/summary.json) · [业务报告](delivery/admin-q1/report.md) · [事件](delivery/admin-q1/events.jsonl) |
 | 五角色独立验证 | live，五项均与固定输入预期匹配 | [摘要](delivery/single-roles/summary.json) · [Checker 指出 18 应改为 17](delivery/single-roles/artifacts/checker-r0.json) |
+| 完整真实返工 | live，9 次调用，1 轮返工，复审通过 | [摘要](delivery/revision/summary.json) · [初审](delivery/revision/artifacts/review-r0.json) · [复审](delivery/revision/artifacts/review-r1.json) |
 | 替身受控注入 | mock，第零轮阻断，第一轮通过 | [注入事件](delivery/revision-mock/events.jsonl) · [复审](delivery/revision-mock/artifacts/review-r1.json) |
 | 缺少反馈文件 | mock，待补资料 | [运行摘要](delivery/missing/summary.json) |
 | 持续退回 | mock，两轮后待人工复核 | [运行摘要](delivery/review-limit/summary.json) |
@@ -40,6 +41,7 @@ M1 状态、验证结论及限制见 [M1 实施记录](../docs/M1实施记录.md
 | --- | --- | --- |
 | [S04](screenshots/S04-input.png) | 技术部表单提交前的需求与资料 | office-0beb5b8a93d5 |
 | [S05](screenshots/S05-source.png) | 完成率的口径与来源 | office-0beb5b8a93d5 |
+| [S06a](screenshots/S06-return.png) · [S06b](screenshots/S06-approved.png) | 真实模型参与的受控错误退回与复审通过 | office-e89266108729 |
 | [S07](screenshots/S07-tech.png) | 技术部汇报的实际下载与核对页面 | office-0beb5b8a93d5 |
 | [S08](screenshots/S08-admin.png) | 行政部满意度报告回看 | office-70c18d122edb |
 | [S09](screenshots/S09-timeout.png) | 真实模型调用超时的终态回看 | office-06777851ef1a |
