@@ -4,13 +4,13 @@
 
 ## 启动工作台
 
-在仓库根目录使用 Python 3.11。首次安装依赖需要网络，安装完成后可以离线查看已记录的实验。
+在解压后的项目根目录使用 Python 3.11 和 uv。已有 Python、尚未安装 uv 时可先运行 `python3.11 -m pip install --user uv`，并确认终端能执行 `uv --version`。首次安装依赖需要网络，安装完成后可以离线查看已记录的实验。
 
 ```bash
 python3.11 -m venv .venv
 source .venv/bin/activate
-python -m pip install -r requirements-dev.txt
-python -m pip install --no-deps -e .
+uv pip install -r requirements-dev.txt
+uv pip install --no-deps -e .
 python -m streamlit run app.py --server.address 127.0.0.1
 ```
 
