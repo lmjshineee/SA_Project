@@ -1,0 +1,9 @@
+{
+  "status": "needs_input",
+  "refs": {
+    "task": "artifacts/task-r0.json",
+    "plan": "artifacts/plan-r0.json",
+    "evidence": "artifacts/evidence-r0.json"
+  },
+  "revision_round": 0
+}

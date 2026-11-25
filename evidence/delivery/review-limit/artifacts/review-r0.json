@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "decision": "changes_required",
+  "issues": [
+    {
+      "schema_version": "1.0",
+      "issue_id": "I1",
+      "severity": "blocker",
+      "category": "content",
+      "section_id": null,
+      "claim_id": null,
+      "expected": "按范围核对",
+      "actual": "测试退回",
+      "suggestion": "再次核验"
+    }
+  ],
+  "suggested_repair_target": "writer",
+  "draft_ref": "artifacts/draft-r0.json",
+  "draft_sha256": "f2e97cfe6f6f97419baf2c3cb316a2eb3cdde47029929957b76f347e436ac9fc",
+  "evidence_ref": "artifacts/evidence-r0.json"
+}

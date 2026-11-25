@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0",
+  "sections": [
+    {
+      "schema_version": "1.0",
+      "section_id": "service_satisfaction",
+      "title": "服务满意度",
+      "purpose": "汇总服务反馈满意度指标，呈现满意反馈数、反馈总数与满意度。",
+      "required": true,
+      "required_metrics": [
+        "satisfied_feedback_count",
+        "feedback_count",
+        "satisfaction_rate"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "section_id": "existing_problems",
+      "title": "存在问题",
+      "purpose": "摘录并归纳当前行政服务中的主要问题。",
+      "required": true,
+      "required_metrics": []
+    },
+    {
+      "schema_version": "1.0",
+      "section_id": "improvement_suggestions",
+      "title": "改进建议",
+      "purpose": "针对存在问题提出下一阶段改进建议与行动方向。",
+      "required": true,
+      "required_metrics": []
+    }
+  ]
+}

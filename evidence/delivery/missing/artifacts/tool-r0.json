@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0",
+  "metrics": [],
+  "excerpts": [
+    {
+      "schema_version": "1.0",
+      "excerpt_id": "N3",
+      "text": "服务台记录显示，访客预约回执偶有延迟。",
+      "source_ref": {
+        "schema_version": "1.0",
+        "file_id": "notes",
+        "snapshot_path": "inputs/notes.txt",
+        "sha256": "0640d020b076e8d70818f8a973d611638dce296d446854337865c04276a274fb",
+        "record_ids": [],
+        "line_range": [
+          3,
+          3
+        ]
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "excerpt_id": "N4",
+      "text": "建议统一回执模板并明确值班交接时点，后续通过复查回执记录评估效果。",
+      "source_ref": {
+        "schema_version": "1.0",
+        "file_id": "notes",
+        "snapshot_path": "inputs/notes.txt",
+        "sha256": "0640d020b076e8d70818f8a973d611638dce296d446854337865c04276a274fb",
+        "record_ids": [],
+        "line_range": [
+          4,
+          4
+        ]
+      }
+    }
+  ],
+  "missing_required": [
+    "feedback_count",
+    "satisfaction_rate",
+    "satisfied_feedback_count"
+  ],
+  "limitations": [
+    "请补充本部门、本季度的对应资料：反馈总数、满意度、满意反馈数"
+  ]
+}

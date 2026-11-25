@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "decision": "changes_required",
+  "issues": [
+    {
+      "schema_version": "1.0",
+      "issue_id": "I1",
+      "severity": "blocker",
+      "category": "metric",
+      "section_id": "service_satisfaction",
+      "claim_id": "C1",
+      "expected": "17条",
+      "actual": "18条",
+      "suggestion": "按证据将满意反馈数修订为17条，与正文和指标来源保持一致。"
+    }
+  ],
+  "suggested_repair_target": "writer",
+  "draft_ref": "artifacts/checker-input-r0.json",
+  "draft_sha256": "85005f066ee24197ef4b56fdb545a8ad42c420d250b4bdf03cc316222ecd667e",
+  "evidence_ref": "artifacts/evidence-r0.json"
+}

@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0",
+  "sections": [
+    {
+      "schema_version": "1.0",
+      "section_id": "s0",
+      "content": "本节结合季度资料。",
+      "claim_ids": [
+        "C1",
+        "C2",
+        "C3"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "section_id": "s1",
+      "content": "本节结合季度资料。",
+      "claim_ids": []
+    },
+    {
+      "schema_version": "1.0",
+      "section_id": "s2",
+      "content": "本节结合季度资料。",
+      "claim_ids": []
+    }
+  ],
+  "claims": [
+    {
+      "schema_version": "1.0",
+      "claim_id": "C1",
+      "section_id": "s0",
+      "metric_id": "satisfied_feedback_count",
+      "value": "17",
+      "unit": "条"
+    },
+    {
+      "schema_version": "1.0",
+      "claim_id": "C2",
+      "section_id": "s0",
+      "metric_id": "feedback_count",
+      "value": "20",
+      "unit": "条"
+    },
+    {
+      "schema_version": "1.0",
+      "claim_id": "C3",
+      "section_id": "s0",
+      "metric_id": "satisfaction_rate",
+      "value": "85",
+      "unit": "%"
+    }
+  ],
+  "plan_ref": "artifacts/plan-r0.json",
+  "evidence_ref": "artifacts/evidence-r0.json"
+}

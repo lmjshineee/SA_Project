@@ -1,0 +1,6 @@
+project_id,department,period,name,status,progress_percent
+P01,技术部,2026-Q2,构建流水线,completed,100
+P02,技术部,2026-Q2,接口目录,completed,100
+P03,技术部,2026-Q2,监控看板,completed,100
+P04,技术部,2026-Q2,日志归档,in_progress,70
+P05,技术部,2026-Q2,查询优化,in_progress,40

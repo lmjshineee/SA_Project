@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0",
+  "title": "季度汇报",
+  "department": "行政部",
+  "period": "2026-Q1",
+  "required_sections": [
+    "服务满意度",
+    "存在问题",
+    "改进建议"
+  ],
+  "output_format": "markdown",
+  "input_file_ids": [
+    "notes"
+  ],
+  "missing_fields": []
+}

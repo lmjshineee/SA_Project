@@ -1,0 +1,13 @@
+{
+  "run_id": "office-8767fae41310",
+  "mode": "live",
+  "calls": 6,
+  "results": {
+    "manager": true,
+    "planner": true,
+    "data": true,
+    "writer": true,
+    "checker": true
+  },
+  "ended_at": "2026-11-24T14:04:17.799523+00:00"
+}

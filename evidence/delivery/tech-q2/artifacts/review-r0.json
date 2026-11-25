@@ -1,0 +1,9 @@
+{
+  "schema_version": "1.0",
+  "decision": "approved",
+  "issues": [],
+  "suggested_repair_target": "none",
+  "draft_ref": "artifacts/draft-r0.json",
+  "draft_sha256": "4f5c9a532a18159cf49dcea7880d06d0b29db87526a49a75e4ddaf8d12050df5",
+  "evidence_ref": "artifacts/evidence-r0.json"
+}

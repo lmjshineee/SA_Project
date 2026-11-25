@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "decision": "changes_required",
+  "issues": [
+    {
+      "schema_version": "1.0",
+      "issue_id": "I1",
+      "severity": "blocker",
+      "category": "metric",
+      "section_id": null,
+      "claim_id": null,
+      "expected": "结构化声明与证据和大纲一致",
+      "actual": "claim differs from supplied evidence: C1",
+      "suggestion": "重新核对本轮大纲、声明和统计值"
+    }
+  ],
+  "suggested_repair_target": "writer",
+  "draft_ref": "artifacts/draft-r0.json",
+  "draft_sha256": "78051abea3b1a0d0dce461a568d9856f7f17a5331bd05e8a47884bae41974984",
+  "evidence_ref": "artifacts/evidence-r0.json"
+}

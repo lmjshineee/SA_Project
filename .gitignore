@@ -41,3 +41,7 @@ dist/
 
 # Unreviewed evidence stays local; publish reviewed files under evidence/
 /evidence/raw/
+
+# Local browser verification outputs
+/.playwright-cli/
+/output/playwright/
